@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+*{
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+svg{
+    position: fixed;
+    z-index: -10;
+}
+.svg-container{
+    height: 80vh;
+    width: 80vw;
+    position: absolute;
+}
+.svg-circle{
+    position: absolute;
+    overflow: hidden;
+    z-index: -9;
+    top: -60%;
+    animation: rotate-scale 100s linear infinite;
+}
+@keyframes rotate-scale {
+    0% {
+      transform: rotate(0deg) scale(1.2);
+      filter: blur(5px);
+    }
+    
+    50% {
+      transform: rotate(180deg) scale(1.5);
+      filter: blur(8px);
+    }
+    
+    25% {
+      transform: rotate(90deg) scale(1.2);
+      filter: blur(5px);
+    }
+    75% {
+        transform: rotate(360deg) scale(1.5);
+        filter: blur(8px);
+    }
+      
+    100% {
+        transform: rotate(270deg) scale(1.2);
+        filter: blur(5px);
+    }
+  }
+
+nav{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    justify-content: space-between;
+    z-index: 1;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 100px;
+}
+li{
+    margin-top: 30px;
+    font-size: 25px;
+}
+li:hover{
+    text-decoration: underline;
+    transform: scale(105%);
+    text-underline-offset: 8px;
+    transition: .2s ease-in-out;
+}
+#accroche {
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-top: 300px;
+    font-size: 25px;
+}
+h1{
+    color: white;
+    font-size: 400px;
+}
+/* ----------------------------------------- */
+
+.gen-container{
+    color: white;
+    position: relative;
+}
+
+.presentation{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1200px;
+    background-color: rgb(46, 46, 46);
+    border: 3px solid white;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.part-one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+
+}
+.part-one h3{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.square1{
+    z-index: -1;
+    position: absolute;
+    width: 600px;
+    height: 1000px;
+    rotate: 135deg;
+    background-image: linear-gradient(
+        -90deg, rgb(46, 46, 46) 50%,
+        rgb(22, 22, 22) 50%
+    );
+    background-size: 100px;
+    border: none;
+    overflow: hidden;
+}
+.spaced-title{
+    margin-top: 75px;
+    
+}
+.card-container{
+    position: relative;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 1200px;
+    margin-bottom: 150px;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(46, 46, 46);
+    border: 3px solid white;
+    border-radius: 3px;
+    z-index: 3;
+    padding: 10px;
+  }
+  
+  .card img {
+    height: 50%;
+    width: 99%;
+    margin-bottom: 20px;
+    border: 3px solid white;
+    border-radius: 3px;
+    object-fit: cover;
+    z-index: 6;
+  }
+  
+  .square2 {
+    top: 100px;
+    right: 50px;
+    z-index: -1;
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    transform: rotate(135deg);
+    background-image: linear-gradient(-90deg, rgb(46, 46, 46) 50%, rgb(22, 22, 22) 50%);
+    background-size: 50px;
+    border: none;
+    overflow: hidden;
+  }
+  
+  .card:hover .square2 {
+    background-image: linear-gradient(-90deg, rgb(46, 46, 46) 50%, rgb(112, 112, 112) 50%);
+  }
+
+  form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+  }
+  #name, #email{
+    width: 50%;
+    border: 3px solid white;
+    background-color: rgb(46, 46, 46);
+    border-radius: 3px;
+    color: white;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
+    outline: none;
+  }
+  #message{
+    height: 250px;
+    border: 3px solid white;
+    background-color: rgb(46, 46, 46);
+    border-radius: 3px;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    outline: none;
+  }
+  .input-decalage {
+    margin-left: auto; /* Ajout de cette ligne */
+  }
+  input{
+    background-color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    width: 150px;
+    font-size: 17px;
+    padding: 5px;
+  }
+  input:active{
+    background-color: rgb(46, 46, 46);
+    color: white;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+    color: white;
+    font-size: 15px;
+    padding: 15px;
+    width: 1200px;
+    height: 50px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    background-color: rgb(46, 46, 46);
+  }
+  label{
+    font-size: 20px;
+  }
+  span{
+    font-size: 20px;
+  }
